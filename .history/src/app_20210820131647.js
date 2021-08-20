@@ -52,7 +52,7 @@ var jokes = [
 "Soy solo un bot que voy a saber de eso","La respuesta no te va agradar","No me hables humano de shit"
 ];
 
-var rusa = [ "La bala no fue disparada",
+var rusa =[ "La bala no fue disparada",
        "Ha muerto entre terribles sufrimientos",
        "La bala quedo encañonada",
        "La pistola era de agua",
@@ -75,18 +75,17 @@ var rusa = [ "La bala no fue disparada",
 
 client.on('message', (channel, tags, message, self) => {
 	if(message.toLowerCase() === '!re') {
- 
-		client.say(channel, "Es un momento returbio en la comunidad de Bampi RuleFive" );
+   const num =0;
+		client.say(channel, `Es un momento returbio en la comunidad de Bampi RuleFive. Hay una totalidad de `+ incrementar() + 'momentos turbios' );
 	}
 });
 
-/*
 client.on('message', (channel, tags, message, self) => {
   
 	if (message.toLowerCase() === '!ruleta') {
 		client.say(channel,"La pistola ha sido disparada y "+ ruleta[Math.floor(Math.random() * ruleta.length)]);
 	}
-});*/
+});
 
 const num= Math.floor(Math.random()*100)+1;
 client.on('message', (channel, tags, message, self) => {

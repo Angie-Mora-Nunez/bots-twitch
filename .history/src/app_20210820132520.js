@@ -86,7 +86,7 @@ client.on('message', (channel, tags, message, self) => {
 	if (message.toLowerCase() === '!ruleta') {
 		client.say(channel,"La pistola ha sido disparada y "+ ruleta[Math.floor(Math.random() * ruleta.length)]);
 	}
-});*/
+});
 
 const num= Math.floor(Math.random()*100)+1;
 client.on('message', (channel, tags, message, self) => {
