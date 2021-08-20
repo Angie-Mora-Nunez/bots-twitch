@@ -1,0 +1,12 @@
+{
+  "name": "twitchbootm",
+  "version": "0.0.0",
+  "description": "A twitch Moderator Bot",
+  "main": "src",
+  "scripts": {
+    
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Angie Mora",
+  "license": "ISC"
+}
