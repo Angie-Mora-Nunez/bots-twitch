@@ -81,7 +81,7 @@ client.on('message', (channel, tags, message, self) => {
 while(message ==='!re'){
 contador++
 }
-		client.say(channel, `Es un momento returbio en la comunidad de Bampi RuleFive. Hay una totalidad de `+ contador + 'momentos turbios' );
+		client.say(channel, `Es un momento returbio en la comunidad de Bampi RuleFive. Hay `+contador);
 	}
 });
 

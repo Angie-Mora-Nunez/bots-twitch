@@ -78,10 +78,8 @@ client.on('message', (channel, tags, message, self) => {
 	if(self) return;
 
 	if(message.toLowerCase() === '!re') {
-while(message ==='!re'){
-contador++
-}
-		client.say(channel, `Es un momento returbio en la comunidad de Bampi RuleFive. Hay una totalidad de `+ contador + 'momentos turbios' );
+while()
+		client.say(channel, `Es un momento returbio en la comunidad de Bampi RuleFive`);
 	}
 });
 

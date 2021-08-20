@@ -52,25 +52,8 @@ var jokes = [
 "Soy solo un bot que voy a saber de eso","La respuesta no te va agradar","No me hables humano de shit"
 ];
 
-var rusa =[ "La bala no fue disparada",
-       "Ha muerto entre terribles sufrimientos",
-       "La bala quedo encañonada",
-       "La pistola era de agua",
-       "La bala tenia un timeout de 60sg",
-       "La bala tenía un timeout de 90sg",
-       "La bala tenia un timeout de 120 sg",
-       "La bala tenia una petición de reto a B4mpi",
-       "La bala tenía un ban para otro usuario del chat",
-       "La bala tenía añadir un comando con lo que quieras (una semana)",
-       "La bala tenía un VIP semanal (se te quita pasado el tiempo)",
-       "La bala tenía una recompensa del canal gratis",
-       "La bala tenía B4mpi no puede hablar",
-       "La bala tenía decir que hacer por 10 segundos",
-       "La bala tenía un mod no puede hablar en el chat, tu decides quien",
-       "La bala tenía raid a quien quieras",
-       "Hacer spam con un mensaje"];
+var rusa =[]
 
-         var contador = 1;
 
 
 client.on('message', (channel, tags, message, self) => {
@@ -78,19 +61,17 @@ client.on('message', (channel, tags, message, self) => {
 	if(self) return;
 
 	if(message.toLowerCase() === '!re') {
-while(message ==='!re'){
-contador++
-}
-		client.say(channel, `Es un momento returbio en la comunidad de Bampi RuleFive. Hay una totalidad de `+ contador + 'momentos turbios' );
+
+		client.say(channel, `Es un momento returbio en la comunidad de Bampi RuleFive`);
 	}
 });
-
+/*
 client.on('message', (channel, message) => {
   
-	if (message.startsWith('!ruleta')) {
-		client.say(channel,"La pistola ha sido disparada y "+ ruleta[Math.floor(Math.random() * ruleta.length)]);
+	if (message.startsWith('!magic')) {
+		client.say(channel,"Estoy analizando mi bola mágica y mi respuesta es "+ jokes[Math.floor(Math.random() * jokes.length)]);
 	}
-});
+});*/
 
 const num= Math.floor(Math.random()*100)+1;
 client.on('message', (channel, tags, message, self) => {

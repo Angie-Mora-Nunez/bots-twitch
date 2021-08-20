@@ -70,7 +70,6 @@ var rusa =[ "La bala no fue disparada",
        "La bala tenía raid a quien quieras",
        "Hacer spam con un mensaje"];
 
-         var contador = 1;
 
 
 client.on('message', (channel, tags, message, self) => {
@@ -78,17 +77,15 @@ client.on('message', (channel, tags, message, self) => {
 	if(self) return;
 
 	if(message.toLowerCase() === '!re') {
-while(message ==='!re'){
-contador++
-}
-		client.say(channel, `Es un momento returbio en la comunidad de Bampi RuleFive. Hay una totalidad de `+ contador + 'momentos turbios' );
+
+		client.say(channel, `Es un momento returbio en la comunidad de Bampi RuleFive`);
 	}
 });
 
 client.on('message', (channel, message) => {
   
 	if (message.startsWith('!ruleta')) {
-		client.say(channel,"La pistola ha sido disparada y "+ ruleta[Math.floor(Math.random() * ruleta.length)]);
+		client.say(channel,"Estoy analizando mi bola mágica y mi respuesta es "+ jokes[Math.floor(Math.random() * jokes.length)]);
 	}
 });
 
