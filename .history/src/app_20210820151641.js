@@ -28,21 +28,15 @@ client.on('message', (channel, tags, message, self) => {
 });
 
 
-var jokes = [
-"no se de que hablas.","sí","no","depende de lo que tu hagas.","es posible.","la vida no es asi.",
-"es negativo.","posiblemente no","no tengo respuesta.","tu no me agradas,no responderé a ello.","la vida es dura.",
-"soy solo un bot que voy a saber de eso.","la respuesta no te va agradar.",
-"no me hables humano de shit.","confía en la divina papaya, y espera tu respuesta.","en mi opinión, sí.",
-"es cierto.","debes confiar en ello.", "pregunta en otro momento","no me hables así."," mis fuentes me dicen que no."
-];
+
 
 
 client.on('message', (channel, tags, message, self) => {
 	// Ignore echoed messages.
 	if(self) return;
 
-	if(message.toLowerCase().startsWith("!magicball")) {
-		client.say(channel, `Hola , @${tags.username} Estoy leyendo mi bola mágica y `+ jokes[Math.floor(Math.random() * jokes.length)]);
+	if(message.toLowerCase() === 'magicball' ) {
+		client.say(channel, `Hola , @${tags.username} Estoy leyendo mi bola mágica y`+rusa[Math.floor(Math.random() * rusa.length)]);
 	}
 });
 
@@ -134,7 +128,7 @@ client.on('message', (channel, tags, message, self) => {
 client.on('message', (channel, tags, message, self) => {
   
 	if (message.toLowerCase() === '!comandos') {
-		client.say(channel,"Lista de Comandos ☞!redes ☞!tula ☞!pregunta (pregunta para el bot) ☞!love (Descubre el amor) ☞!dorito (regala un dorito) ☞!duelo (Duelo con otro user del chat) ☞!ruleta(prueba tu suerte) ☞!uptime (Tiempo de directo) ☞!tiempo (¿Cuanto llevas de seguir a Bampi?) ☞!bh Conoce el mejor canal de ESports ☞!sr pide una canción ☞!fiesta ☞!años, !beso, !cachetada, !patada, !hermo, !dat, !magicball");
+		client.say(channel,"Lista de Comandos ☞!redes ☞!tula ☞!pregunta (pregunta para el bot) ☞!love (Descubre el amor) ☞!dorito (regala un dorito) ☞!duelo (Duelo con otro user del chat) ☞!ruleta(prueba tu suerte) ☞!uptime (Tiempo de directo) ☞!tiempo (¿Cuanto llevas de seguir a Bampi?) ☞!bh Conoce el mejor canal de ESports ☞!sr pide una canción ☞!fiesta ☞!años !beso !cachetada !patada !hermo !dat");
 	}
 });
 

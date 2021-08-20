@@ -22,31 +22,10 @@ client.on('message', (channel, tags, message, self) => {
 	// Ignore echoed messages.
 	if(self) return;
 
-	if(message.toLowerCase() === 'hola'|| message.toLowerCase()=== 'buenas' ) {
-		client.say(channel, `Hola , @${tags.username} Bienvenute al stream, estamos felices de tenerte por aca, ojala te la pases bien. No olvides dar host DarkMode, recuerda darle host.`);
+	if(message.toLowerCase() === 'hola') {
+		client.say(channel, `Hola , @${tags.username} Bienvenute al stream, estamos felices de tenerte por aca, ojala te la pases bien. No olvides dar host DarkMode`);
 	}
 });
-
-
-var jokes = [
-"no se de que hablas.","sí","no","depende de lo que tu hagas.","es posible.","la vida no es asi.",
-"es negativo.","posiblemente no","no tengo respuesta.","tu no me agradas,no responderé a ello.","la vida es dura.",
-"soy solo un bot que voy a saber de eso.","la respuesta no te va agradar.",
-"no me hables humano de shit.","confía en la divina papaya, y espera tu respuesta.","en mi opinión, sí.",
-"es cierto.","debes confiar en ello.", "pregunta en otro momento","no me hables así."," mis fuentes me dicen que no."
-];
-
-
-client.on('message', (channel, tags, message, self) => {
-	// Ignore echoed messages.
-	if(self) return;
-
-	if(message.toLowerCase().startsWith("!magicball")) {
-		client.say(channel, `Hola , @${tags.username} Estoy leyendo mi bola mágica y `+ jokes[Math.floor(Math.random() * jokes.length)]);
-	}
-});
-
-
 client.on('message', (channel, tags, message, self) => {
 	// Ignore echoed messages.
 	if(self) return;
@@ -67,7 +46,11 @@ client.on('message', (channel, tags, message, self) => {
 	}
 });
 
-
+var jokes = [
+"No se de que hablas","Sí","No","Depende de lo que tu hagas","Es posible","La vida no es asi",
+"Es negativo","Posiblemente no","No tengo respuesta","Tu no me agradas,no responderé a ello","La vida es dura",
+"Soy solo un bot que voy a saber de eso","La respuesta no te va agradar","No me hables humano de shit"
+];
 
 var rusa = [ "La bala no fue disparada",
        "Ha muerto entre terribles sufrimientos",
@@ -97,14 +80,21 @@ var rusa = [ "La bala no fue disparada",
 	}
 }); 
 
-var nume = 0;
+
 client.on('message', (channel, tags, message, self) => {
 	if(message.toLowerCase() === '!re') {
- nume++;
-		client.say(channel, " Es un momento returbio en la comunidad de Bampi RuleFive. Hemos tenido una cantidad de: " + nume + " momentos turbios" );
+ var cha = incrementar();
+		client.say(channel, "hola" + cha + " hola" );
 	}
 });
 
+/*
+client.on('message', (channel, tags, message, self) => {
+  
+	if (message.toLowerCase() === '!ruleta') {
+		client.say(channel,"La pistola ha sido disparada y "+ ruleta[Math.floor(Math.random() * ruleta.length)]);
+	}
+});*/
 
 const num= Math.floor(Math.random()*100)+1;
 client.on('message', (channel, tags, message, self) => {
@@ -123,20 +113,6 @@ client.on('message', (channel, tags, message, self) => {
 	}
 });
 
-client.on('message', (channel, tags, message, self) => {
-  
-	if (message.toLowerCase() === '!redes') {
-		client.say(channel,"Whatsapp: https://chat.whatsapp.com/LYc91TjrMjtIfprp766PYl \n Instagram: https://www.instagram.com/b4mpixd/ \n Discord https://discord.gg/K25j7CznSZ \n Tiktok https://www.tiktok.com/@b4mpi_ \n Youtube https://www.youtube.com/channel/UC29LyjZgFNmgPDzNehgaQ5A" );
-	}
-});
-
-
-client.on('message', (channel, tags, message, self) => {
-  
-	if (message.toLowerCase() === '!comandos') {
-		client.say(channel,"Lista de Comandos ☞!redes ☞!tula ☞!pregunta (pregunta para el bot) ☞!love (Descubre el amor) ☞!dorito (regala un dorito) ☞!duelo (Duelo con otro user del chat) ☞!ruleta(prueba tu suerte) ☞!uptime (Tiempo de directo) ☞!tiempo (¿Cuanto llevas de seguir a Bampi?) ☞!bh Conoce el mejor canal de ESports ☞!sr pide una canción ☞!fiesta ☞!años, !beso, !cachetada, !patada, !hermo, !dat, !magicball");
-	}
-});
 
   client.on('hosted', (channel, username, viewers, autohost) => {
 	onHostedHandler(channel, username, viewers, autohost)
@@ -181,11 +157,17 @@ function onHostedHandler (channel, username, viewers, autohost) {
   )
 }
 
-
+ var contador = 0;
+function incrementar () {
+    while (contador !== 10)
+    {
+        contador++;
+    }  
+}
 
 function onRaidedHandler(channel, username, viewers) {
   client.say(channel,
-    `Hey Clap clap @${username} muchas gracias por ese raid con ${viewers} guapetes!. Ve a dar una vuelta por su canal y dale un corazoncito. https://www.twitch.tv/@${username}` 
+    `Clap clap @${username} muchas gracias por ese raid con ${viewers} guapetes!`
   )
 }
 

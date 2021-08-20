@@ -29,11 +29,11 @@ client.on('message', (channel, tags, message, self) => {
 
 
 var jokes = [
-"no se de que hablas.","sí","no","depende de lo que tu hagas.","es posible.","la vida no es asi.",
-"es negativo.","posiblemente no","no tengo respuesta.","tu no me agradas,no responderé a ello.","la vida es dura.",
-"soy solo un bot que voy a saber de eso.","la respuesta no te va agradar.",
-"no me hables humano de shit.","confía en la divina papaya, y espera tu respuesta.","en mi opinión, sí.",
-"es cierto.","debes confiar en ello.", "pregunta en otro momento","no me hables así."," mis fuentes me dicen que no."
+"no se de que hablas","í","No","depende de lo que tu hagas","Es posible","La vida no es asi",
+"es negativo","Posiblemente no","no tengo respuesta","Tu no me agradas,no responderé a ello","La vida es dura",
+"soy solo un bot que voy a saber de eso","La respuesta no te va agradar",
+"no me hables humano de shit","confía en la divina papaya, y espera tu respuesta","En mi opinión, sí",
+"es cierto","debes confiar en ello", "Pregunta en otro momento","No me hables así"," Mis fuentes me dicen que no"
 ];
 
 
