@@ -75,8 +75,8 @@ var rusa =[ "La bala no fue disparada",
 
 client.on('message', (channel, tags, message, self) => {
 	if(message.toLowerCase() === '!re') {
-   const lo= incrementar();
-		client.say(channel, `Es un momento returbio en la comunidad de Bampi RuleFive. Hay una totalidad de `+ lo + 'momentos turbios' );
+    
+		client.say(channel, `Es un momento returbio en la comunidad de Bampi RuleFive. Hay una totalidad de `+ contador + 'momentos turbios' );
 	}
 });
 

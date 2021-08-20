@@ -70,17 +70,22 @@ var rusa =[ "La bala no fue disparada",
        "La bala tenía raid a quien quieras",
        "Hacer spam con un mensaje"];
 
-     
+         var contador = 1;
 
 
 client.on('message', (channel, tags, message, self) => {
+	// Ignore echoed messages.
+	if(self) return;
+
 	if(message.toLowerCase() === '!re') {
-   const lo= incrementar();
-		client.say(channel, `Es un momento returbio en la comunidad de Bampi RuleFive. Hay una totalidad de `+ lo + 'momentos turbios' );
+while(message.toLowerCase ==='!re'){
+contador++
+}
+		client.say(channel, `Es un momento returbio en la comunidad de Bampi RuleFive. Hay una totalidad de `+ contador + 'momentos turbios' );
 	}
 });
 
-client.on('message', (channel, tags, message, self) => {
+client.on('message', (channel, message) => {
   
 	if (message.toLowerCase() === '!ruleta') {
 		client.say(channel,"La pistola ha sido disparada y "+ ruleta[Math.floor(Math.random() * ruleta.length)]);
@@ -148,10 +153,13 @@ function onHostedHandler (channel, username, viewers, autohost) {
   )
 }
 
-function incrementar () {
-      var contador = 0;
-contador++;
-return contador;
+function Random () {
+	const lord =[
+		"mano","sandia","piña"	
+		]
+		
+		const pa= lord.forEach(element => console.log(element));
+		return pa
 }
 
 function onRaidedHandler(channel, username, viewers) {
