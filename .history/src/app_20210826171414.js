@@ -120,6 +120,7 @@ client.on('message', (channel, tags, message, self) => {
 });
 
 
+
 client.on('message', (channel, tags, message, self) => {
   
 	if (message.toLowerCase() === '!dat') {
@@ -141,6 +142,27 @@ client.on('message', (channel, tags, message, self) => {
 		client.say(channel,"Lista de Comandos ☞!redes ☞!tula ☞!pregunta (pregunta para el bot) ☞!love (Descubre el amor) ☞!dorito (regala un dorito) ☞!duelo (Duelo con otro user del chat) ☞!ruleta(prueba tu suerte) ☞!uptime (Tiempo de directo) ☞!tiempo (¿Cuanto llevas de seguir a Bampi?) ☞!bh Conoce el mejor canal de ESports ☞!sr pide una canción ☞!fiesta ☞!años, !beso, !cachetada, !patada, !hermo, !dat, !magicball");
 	}
 });
+
+client.on('message', (channel, tags, message, self) => {
+  
+	if (message.toLowerCase() === '!jc') {
+		client.say(channel,"!game just chatting");
+	}
+})
+
+client.on('message', (channel, tags, message, self) => {
+  
+	if (message.toLowerCase() === '!mb') {
+		client.say(channel,"!game Marbles on Stream");
+	}
+})
+
+client.on('message', (channel, tags, message, self) => {
+  
+	if (message.toLowerCase() === '!a') {
+		client.say(channel,"!game Marbles on Stream");
+	}
+})
 
   client.on('hosted', (channel, username, viewers) => {
 	onHostedHandler(channel, username, viewers)
@@ -201,7 +223,7 @@ function onSubscriptionHandler(channel, username, method, message, userstate) {
 
 function onCheerHandler(channel, userstate, message)  {
   client.say(channel,
-    `Clap clap @${userstate.username}  muchas gracias enormemente agradecidxs por esa cantidad increíble de ${userstate.bits} bits!`
+    `Clap clap @${userstate.username} muchas gracias enormemente agradecidxs por esa cantidad increíble de ${userstate.bits} bits!`
   )
 }
 

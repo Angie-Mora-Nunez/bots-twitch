@@ -120,6 +120,7 @@ client.on('message', (channel, tags, message, self) => {
 });
 
 
+
 client.on('message', (channel, tags, message, self) => {
   
 	if (message.toLowerCase() === '!dat') {
@@ -141,6 +142,10 @@ client.on('message', (channel, tags, message, self) => {
 		client.say(channel,"Lista de Comandos ☞!redes ☞!tula ☞!pregunta (pregunta para el bot) ☞!love (Descubre el amor) ☞!dorito (regala un dorito) ☞!duelo (Duelo con otro user del chat) ☞!ruleta(prueba tu suerte) ☞!uptime (Tiempo de directo) ☞!tiempo (¿Cuanto llevas de seguir a Bampi?) ☞!bh Conoce el mejor canal de ESports ☞!sr pide una canción ☞!fiesta ☞!años, !beso, !cachetada, !patada, !hermo, !dat, !magicball");
 	}
 });
+
+
+
+
 
   client.on('hosted', (channel, username, viewers) => {
 	onHostedHandler(channel, username, viewers)
@@ -185,7 +190,11 @@ function onHostedHandler (channel, username, viewers) {
   )
 }
 
-
+function viewer (channel) {
+  client.say(channel,
+    `$(urlfetch https://2g.be/twitch/randomviewer.php?channel=$(channel))`
+  )
+}
 
 function onRaidedHandler(channel, username, viewers) {
   client.say(channel,
@@ -201,7 +210,7 @@ function onSubscriptionHandler(channel, username, method, message, userstate) {
 
 function onCheerHandler(channel, userstate, message)  {
   client.say(channel,
-    `Clap clap @${userstate.username}  muchas gracias enormemente agradecidxs por esa cantidad increíble de ${userstate.bits} bits!`
+    `Clap clap @${userstate.username} muchas gracias enormemente agradecidxs por esa cantidad increíble de ${userstate.bits} bits!`
   )
 }
 

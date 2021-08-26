@@ -201,7 +201,7 @@ function onSubscriptionHandler(channel, username, method, message, userstate) {
 
 function onCheerHandler(channel, userstate, message)  {
   client.say(channel,
-    `Clap clap @${userstate.username}  muchas gracias enormemente agradecidxs por esa cantidad increíble de ${userstate.bits} bits!`
+    `Clap clap @${userstate.username} ${userstate} muchas gracias enormemente agradecidxs por esa cantidad increíble de ${userstate.bits} bits!`
   )
 }
 

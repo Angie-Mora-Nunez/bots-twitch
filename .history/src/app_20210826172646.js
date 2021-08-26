@@ -59,7 +59,7 @@ client.on('message', (channel, tags, message, self) => {
 
 client.on('message', (channel, tags, message, self, moderator) => {
 	// Ignore echoed messages.
-	if(self) return;
+	if(self &) return;
 
 	if(message.toLowerCase() === '!view') {
 

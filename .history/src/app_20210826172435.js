@@ -185,7 +185,11 @@ function onHostedHandler (channel, username, viewers) {
   )
 }
 
-
+function viewer (channel) {
+  client.say(channel,
+    `$(urlfetch https://2g.be/twitch/randomviewer.php?channel=$(channel))`
+  )
+}
 
 function onRaidedHandler(channel, username, viewers) {
   client.say(channel,
@@ -201,7 +205,7 @@ function onSubscriptionHandler(channel, username, method, message, userstate) {
 
 function onCheerHandler(channel, userstate, message)  {
   client.say(channel,
-    `Clap clap @${userstate.username}  muchas gracias enormemente agradecidxs por esa cantidad increíble de ${userstate.bits} bits!`
+    `Clap clap @${userstate.username} muchas gracias enormemente agradecidxs por esa cantidad increíble de ${userstate.bits} bits!`
   )
 }
 

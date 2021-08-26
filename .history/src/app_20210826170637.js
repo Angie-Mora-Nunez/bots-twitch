@@ -86,10 +86,11 @@ var rusa = [ "La bala no fue disparada",
        "La bala tenia un timeout de 120 sg",
        "La bala tenía un ban para otro usuario del chat",
        "La bala tenía un VIP semanal (se te quita pasado el tiempo)",
-       "La bala tenía una recompensa del canal gratis (no mod)",
+       "La bala tenía una recompensa del canal gratis",
        "La bala tenía decir que hacer por 10 segundos",
        "La bala tenía un mod no puede hablar en el chat, tu decides quien",
        "La bala tenía timeout de 175sg",
+       
        "Hacer spam con un mensaje"];
 
     client.on('message', (channel, tags, message, self) => {
@@ -118,6 +119,7 @@ client.on('message', (channel, tags, message, self) => {
 		client.say(channel,"Según mis estandares tu tienes un " + [Math.floor(Math.random()*100)+1] + "% de belleza");
 	}
 });
+
 
 
 client.on('message', (channel, tags, message, self) => {
@@ -201,7 +203,7 @@ function onSubscriptionHandler(channel, username, method, message, userstate) {
 
 function onCheerHandler(channel, userstate, message)  {
   client.say(channel,
-    `Clap clap @${userstate.username}  muchas gracias enormemente agradecidxs por esa cantidad increíble de ${userstate.bits} bits!`
+    `Clap clap @${userstate.username} muchas gracias enormemente agradecidxs por esa cantidad increíble de ${userstate.bits} bits!`
   )
 }
 

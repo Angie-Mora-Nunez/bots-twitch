@@ -22,8 +22,8 @@ client.on('message', (channel, tags, message, self) => {
 	// Ignore echoed messages.
 	if(self) return;
 
-	if(message.toLowerCase() === 'hola'|| message.toLowerCase()=== 'buenas'|| message.toLowerCase()=== 'holaaa'|| message.toLowerCase().startsWith( 'buenas') || message.toLowerCase().startsWith('hola') ) {
-		client.say(channel, `Hola , @${tags.username} Bienvenute al stream, estamos felices de tenerte por aca, ojala te la pases bien. No olvides dar host DarkMode.`);
+	if(message.toLowerCase() === 'hola'|| message.toLowerCase()=== 'buenas'|| message.toLowerCase()=== 'holaaa'|| message.toLowerCase().startsWith( 'buenas') || message.toLowerCase()=== 'buenas') {
+		client.say(channel, `Hola , @${tags.username} Bienvenute al stream, estamos felices de tenerte por aca, ojala te la pases bien. No olvides dar host DarkMode, recuerda darle host.`);
 	}
 });
 
@@ -84,12 +84,15 @@ var rusa = [ "La bala no fue disparada",
        "La bala tenia un timeout de 60sg",
        "La bala tenía un timeout de 90sg",
        "La bala tenia un timeout de 120 sg",
+       "La bala tenia una petición de reto a B4mpi",
        "La bala tenía un ban para otro usuario del chat",
+       "La bala tenía añadir un comando con lo que quieras (una semana)",
        "La bala tenía un VIP semanal (se te quita pasado el tiempo)",
-       "La bala tenía una recompensa del canal gratis (no mod)",
+       "La bala tenía una recompensa del canal gratis",
+       "La bala tenía B4mpi no puede hablar",
        "La bala tenía decir que hacer por 10 segundos",
        "La bala tenía un mod no puede hablar en el chat, tu decides quien",
-       "La bala tenía timeout de 175sg",
+       "La bala tenía raid a quien quieras",
        "Hacer spam con un mensaje"];
 
     client.on('message', (channel, tags, message, self) => {
@@ -120,6 +123,7 @@ client.on('message', (channel, tags, message, self) => {
 });
 
 
+
 client.on('message', (channel, tags, message, self) => {
   
 	if (message.toLowerCase() === '!dat') {
@@ -142,8 +146,8 @@ client.on('message', (channel, tags, message, self) => {
 	}
 });
 
-  client.on('hosted', (channel, username, viewers) => {
-	onHostedHandler(channel, username, viewers)
+  client.on('hosted', (channel, username, viewers, autohost) => {
+	onHostedHandler(channel, username, viewers, autohost)
   })
   
   client.on('subscription', (channel, username, method, message, userstate) => {
@@ -179,7 +183,7 @@ client.on('message', (channel, tags, message, self) => {
   })
   
 
-function onHostedHandler (channel, username, viewers) {
+function onHostedHandler (channel, username, viewers, autohost) {
   client.say(channel,
     `Hey @${username} muchas gracias por ese hosteazo con ${viewers} guapetes!`
   )
@@ -189,7 +193,7 @@ function onHostedHandler (channel, username, viewers) {
 
 function onRaidedHandler(channel, username, viewers) {
   client.say(channel,
-    `Hey Clap clap @${username} muchas gracias por ese raid con ${viewers} guapetes!. Ve a dar una vuelta por su canal y dale un corazoncito. https://www.twitch.tv/${username}` 
+    `Hey Clap clap @${username} muchas gracias por ese raid con ${viewers} guapetes!. Ve a dar una vuelta por su canal y dale un corazoncito. https://www.twitch.tv/@${username}` 
   )
 }
 
@@ -201,7 +205,7 @@ function onSubscriptionHandler(channel, username, method, message, userstate) {
 
 function onCheerHandler(channel, userstate, message)  {
   client.say(channel,
-    `Clap clap @${userstate.username}  muchas gracias enormemente agradecidxs por esa cantidad increíble de ${userstate.bits} bits!`
+    `Clap clap @${userstate.username} muchas gracias enormemente agradecidxs por esa cantidad increíble de ${userstate.bits} bits!`
   )
 }
 
