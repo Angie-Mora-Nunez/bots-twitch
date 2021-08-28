@@ -76,7 +76,7 @@ client.on('message', (channel, tags, message, self) => {
 		client.say(channel, `Recuerda que si tienes algo que hacer, puedes dejar la view para apoyar el canal PartyTime -Ul=moderator`);
 	}
 });
-/*
+//
 var rusa = [ "La bala no fue disparada",
        "Ha muerto entre terribles sufrimientos",
        "La bala quedo encañonada",
@@ -100,7 +100,7 @@ var rusa = [ "La bala no fue disparada",
 
 		client.say(channel, rusa[Math.floor(Math.random() * rusa.length)]);
 	}
-}); */
+}); 
 
 var nume = 0;
 client.on('message', (channel, tags, message, self) => {

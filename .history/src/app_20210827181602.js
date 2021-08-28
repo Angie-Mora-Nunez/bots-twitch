@@ -100,7 +100,7 @@ var rusa = [ "La bala no fue disparada",
 
 		client.say(channel, rusa[Math.floor(Math.random() * rusa.length)]);
 	}
-}); */
+}); 
 
 var nume = 0;
 client.on('message', (channel, tags, message, self) => {
