@@ -47,9 +47,35 @@ client.on('message', (channel, tags, message, self) => {
 });
 
 
+client.on('message', (channel, tags, message, self) => {
+	// Ignore echoed messages.
+	if(self) return;
 
+	if(message.toLowerCase() === '!h') {
 
+		client.say(channel, `Recuerda que con un host podemos llegar a recomendados PartyTime`);
+	}
+});
 
+client.on('message', (channel, tags, message, self, moderator) => {
+	// Ignore echoed messages.
+	if(self) return;
+
+	if(message.toLowerCase() === '!view') {
+
+		client.say(channel, `Recuerda que si tienes algo que hacer, puedes dejar la view para apoyar el canal PartyTime`);
+	}
+});
+
+client.on('message', (channel, tags, message, self) => {
+	// Ignore echoed messages.
+  if(self) return;
+
+	if(message.toLowerCase() === '!a') {
+
+		client.say(channel, `Recuerda que si tienes algo que hacer, puedes dejar la view para apoyar el canal PartyTime -Ul=moderator`);
+	}
+});
 /*
 var rusa = [ "La bala no fue disparada",
        "Ha muerto entre terribles sufrimientos",
@@ -195,6 +221,15 @@ client.on ("chat", function (channel, user, message, self) {
       });
 
     
+      client.on ("chat", function (channel, user, message, self) {
+        if (user.mod || user ['user-type'] === 'mod') {
+        if (message.startsWith ("!ban")) {
+        client.say(channel, "Por mandar spam, molestar a usuarios, pedir VIP o MOD se te dará un timeout de 1 minuto para que reflexiones. Si incumples 3 veces, serás baneado. Si la ofensa es de peso, hacia Bampi u otro usuario, tendrás un timeout de 5 minutos, si lo vuelves a hacer, serás baneado. Muchas gracias");
+        };
+        };
+        });
+  
+
 client.on('message', (channel, tags, message, self) => {
 	if (message.toLowerCase() === '!comandos') {
 		client.say(channel,"Lista de Comandos ☞!redes, ☞!tula, ☞!love, ☞!dorito ☞!duelo, ☞!uptime, ☞!tiempo, ☞!bh, ☞!sr pide una canción, ☞!fiesta, ☞!años, ☞!beso, ☞!cachetada, ☞!patada, ☞!hermo, ☞!dat, ☞!magicball, ☞!pvp");

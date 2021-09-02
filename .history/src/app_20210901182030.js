@@ -47,6 +47,15 @@ client.on('message', (channel, tags, message, self) => {
 });
 
 
+client.on('message', (channel, tags, message, self) => {
+	// Ignore echoed messages.
+	if(self) return;
+
+	if(message.toLowerCase() === '!h') {
+
+		client.say(channel, `Recuerda que con un host podemos llegar a recomendados PartyTime`);
+	}
+});
 
 
 
@@ -195,6 +204,9 @@ client.on ("chat", function (channel, user, message, self) {
       });
 
     
+    
+  
+
 client.on('message', (channel, tags, message, self) => {
 	if (message.toLowerCase() === '!comandos') {
 		client.say(channel,"Lista de Comandos ☞!redes, ☞!tula, ☞!love, ☞!dorito ☞!duelo, ☞!uptime, ☞!tiempo, ☞!bh, ☞!sr pide una canción, ☞!fiesta, ☞!años, ☞!beso, ☞!cachetada, ☞!patada, ☞!hermo, ☞!dat, ☞!magicball, ☞!pvp");
