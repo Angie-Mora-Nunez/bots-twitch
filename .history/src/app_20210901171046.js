@@ -155,76 +155,12 @@ client.on ("chat", function (channel, user, message, self) {
   };
   });
 
-  client.on ("chat", function (channel, user, message, self) {
-    if (user.mod || user ['user-type'] === 'mod') {
-    if (message.startsWith ("!sigue")) {
-    var input = message.slice(4).split(' ');
-    client.say(channel, "Ve a darle corazoncito a  " +input+ " en https://www.twitch.tv/"+input+" para agradacerle por su gran apoyo al canal Kappa.");
-    };
-    };
-    });
+
   
-client.on ("chat", function (channel, user, message, self) {
-    if (user.mod || user ['user-type'] === 'mod') {
-    if (message.startsWith ("!jc")) {
-    client.say(channel, "!game Just Chatting");
-    };
-    };
-    });
-
-    client.on ("chat", function (channel, user, message, self) {
-    if (user.mod || user ['user-type'] === 'mod') {
-    if (message.startsWith ("!mb")) {
-    client.say(channel, "!game Marbles on stream");
-    };
-    };
-    });
-
-client.on ("chat", function (channel, user, message, self) {
-    if (user.mod || user ['user-type'] === 'mod') {
-    if (message.startsWith ("!mn")) {
-    client.say(channel, "!game Minecraft");
-    };
-    };
-    });
-
-    client.on ("chat", function (channel, user, message, self) {
-    if (user.mod || user ['user-type'] === 'mod') {
-    if (message.startsWith ("!gp")) {
-    client.say(channel, "!game Gartic Phone");
-    };
-    };
-    });
-
-    client.on ("chat", function (channel, user, message, self) {
-    if (user.mod || user ['user-type'] === 'mod') {
-    if (message.startsWith ("!sl")) {
-    client.say(channel, "!game Slitter.io");
-    };
-    };
-    });
-
-    client.on ("chat", function (channel, user, message, self) {
-    if (user.mod || user ['user-type'] === 'mod') {
-    if (message.startsWith ("!reglas")) {
-    client.say(channel, "las reglas de este chat son simples. -No insultes.. o hay timeout. -No hagas spam... o hay timeout. -No molestes a usuarios... o hay timeout. -No mandes links.... o hay timeout..  Si después de leer esto, lo incumples un /ban se te vería bien :3...besitos :kissing_heart:");
-    };
-    };
-    });
-
-    client.on ("chat", function (channel, user, message, self) {
-      if (user.mod || user ['user-type'] === 'mod') {
-      if (message.startsWith ("!ban")) {
-      client.say(channel, "Por mandar spam, molestar a usuarios, pedir VIP o MOD se te dará un timeout de 1 minuto para que reflexiones. Si incumples 3 veces, serás baneado. Si la ofensa es de peso, hacia Bampi u otro usuario, tendrás un timeout de 5 minutos, si lo vuelves a hacer, serás baneado. Muchas gracias");
-      };
-      };
-      });
-
-    
-
 client.on('message', (channel, tags, message, self) => {
+  
 	if (message.toLowerCase() === '!comandos') {
-		client.say(channel,"Lista de Comandos ☞!redes, ☞!tula, ☞!love, ☞!dorito ☞!duelo, ☞!uptime, ☞!tiempo, ☞!bh, ☞!sr pide una canción, ☞!fiesta, ☞!años, ☞!beso, ☞!cachetada, ☞!patada, ☞!hermo, ☞!dat, ☞!magicball, ☞!pvp");
+		client.say(channel,"Lista de Comandos ☞!redes ☞!tula ☞!pregunta (pregunta para el bot) ☞!love (Descubre el amor) ☞!dorito (regala un dorito) ☞!duelo (Duelo con otro user del chat) ☞!ruleta(prueba tu suerte) ☞!uptime (Tiempo de directo) ☞!tiempo (¿Cuanto llevas de seguir a Bampi?) ☞!bh Conoce el mejor canal de ESports ☞!sr pide una canción ☞!fiesta ☞!años, !beso, !cachetada, !patada, !hermo, !dat, !magicball");
 	}
 });
 

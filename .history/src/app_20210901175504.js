@@ -180,45 +180,7 @@ client.on ("chat", function (channel, user, message, self) {
     };
     });
 
-client.on ("chat", function (channel, user, message, self) {
-    if (user.mod || user ['user-type'] === 'mod') {
-    if (message.startsWith ("!mn")) {
-    client.say(channel, "!game Minecraft");
-    };
-    };
-    });
 
-    client.on ("chat", function (channel, user, message, self) {
-    if (user.mod || user ['user-type'] === 'mod') {
-    if (message.startsWith ("!gp")) {
-    client.say(channel, "!game Gartic Phone");
-    };
-    };
-    });
-
-    client.on ("chat", function (channel, user, message, self) {
-    if (user.mod || user ['user-type'] === 'mod') {
-    if (message.startsWith ("!sl")) {
-    client.say(channel, "!game Slitter.io");
-    };
-    };
-    });
-
-    client.on ("chat", function (channel, user, message, self) {
-    if (user.mod || user ['user-type'] === 'mod') {
-    if (message.startsWith ("!reglas")) {
-    client.say(channel, "las reglas de este chat son simples. -No insultes.. o hay timeout. -No hagas spam... o hay timeout. -No molestes a usuarios... o hay timeout. -No mandes links.... o hay timeout..  Si después de leer esto, lo incumples un /ban se te vería bien :3...besitos :kissing_heart:");
-    };
-    };
-    });
-
-    client.on ("chat", function (channel, user, message, self) {
-      if (user.mod || user ['user-type'] === 'mod') {
-      if (message.startsWith ("!ban")) {
-      client.say(channel, "Por mandar spam, molestar a usuarios, pedir VIP o MOD se te dará un timeout de 1 minuto para que reflexiones. Si incumples 3 veces, serás baneado. Si la ofensa es de peso, hacia Bampi u otro usuario, tendrás un timeout de 5 minutos, si lo vuelves a hacer, serás baneado. Muchas gracias");
-      };
-      };
-      });
 
     
 
