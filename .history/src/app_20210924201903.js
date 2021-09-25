@@ -194,7 +194,9 @@ client.on ("chat", function (channel, user, message, self) {
       };
       });
 
-
+function messageInterval(address, port) {
+    client.say("prueba");
+}
     
 client.on('message', (channel, tags, message, self) => {
 	if (message.toLowerCase() === '!comandos') {
