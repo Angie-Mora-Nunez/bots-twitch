@@ -22,7 +22,7 @@ client.on('message', (channel, tags, message, self) => {
 	// Ignore echoed messages.
 	if(self) return;
 
-	if(message.toLowerCase() === 'Buenas'){
+	if(message.toLowerCase() === 'hola'){
 		client.say(channel, `Hola , @${tags.username} Bienvenute al stream, estamos felices de tenerte por aca, ojala te la pases bien. No olvides dar host DarkMode.`);
 	}
 });
@@ -133,7 +133,7 @@ client.on ("chat", function (channel, user, message, self) {
     if (user.mod || user ['user-type'] === 'mod') {
     if (message.toLowerCase().startsWith("!sigue")){
     var input = message.slice(7).split(' ');
-    client.say(channel, "Ve a darle corazoncito a  " +input+ " en twitch.tv/"+input+" para agradacerle por su gran apoyo al canal Kappa.");
+    client.say(channel, "Ve a darle corazoncito a  " +input+ " en https://www.twitch.tv/"+input+" para agradacerle por su gran apoyo al canal Kappa.");
     };
     };
     });

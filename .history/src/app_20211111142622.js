@@ -22,7 +22,7 @@ client.on('message', (channel, tags, message, self) => {
 	// Ignore echoed messages.
 	if(self) return;
 
-	if(message.toLowerCase() === 'Buenas'){
+	if(message.toLowerCase() === 'Buen'){
 		client.say(channel, `Hola , @${tags.username} Bienvenute al stream, estamos felices de tenerte por aca, ojala te la pases bien. No olvides dar host DarkMode.`);
 	}
 });
