@@ -22,7 +22,7 @@ client.on('message', (channel, tags, message, self) => {
 	// Ignore echoed messages.
 	if(self) return;
 
-	if(message.toLowerCase() === 'Buenas'){
+	if(message.toLowerCase() === 'buenas') {
 		client.say(channel, `Hola , @${tags.username} Bienvenute al stream, estamos felices de tenerte por aca, ojala te la pases bien. No olvides dar host DarkMode.`);
 	}
 });
@@ -249,7 +249,7 @@ function onHostedHandler (channel, username, viewers) {
 
 function onRaidedHandler(channel, username, viewers) {
   client.say(channel,
-    `Hey Clap clap @${username} muchas gracias por ese raid con ${viewers} guapetes!. Ve a dar una vuelta por su canal y dale un corazoncito. https://www.twitch.tv/${username}` 
+    `Hey Clap clap @${username} muchas gracias por ese raid con ${viewers} guapetes!. Ve a dar una vuelta por su canal y dale un corazoncito. twitch.tv/${username}` 
   )
 }
 
