@@ -133,7 +133,7 @@ client.on ("chat", function (channel, user, message, self) {
     if (user.mod || user ['user-type'] === 'mod') {
     if (message.toLowerCase().startsWith("!sigue")){
     var input = message.slice(7).split(' ');
-    client.say(channel, "Ve a darle corazoncito a  " +input+ " en https://www.twitch.tv/"+input+" para agradacerle por su gran apoyo al canal Kappa.");
+    client.say(channel, "Ve a darle corazoncito a  " +input+ " en twitch.tv/"+input+" para agradacerle por su gran apoyo al canal Kappa.");
     };
     };
     });
