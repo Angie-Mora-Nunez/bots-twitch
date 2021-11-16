@@ -46,11 +46,6 @@ client.on('message', (channel, tags, message, self) => {
 	}
 });
 
-
-
-
-
-
 var rusa = [ "La bala no fue disparada",
        "Ha muerto entre terribles sufrimientos",
        "La bala quedo encañonada",
